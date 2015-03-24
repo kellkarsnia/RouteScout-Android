@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RouteScout</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_abort">Cancel trip</string>
+    
+    <string name="title_activity_household">RouteScout</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_trip">Trip</string>
+    <string name="title_activity_splash_screen">welcome</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>

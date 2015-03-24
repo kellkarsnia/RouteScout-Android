@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="0dp" android:right="16dp"><bitmap android:src="@drawable/li_left" android:gravity="left" android:tileMode="disabled"/></item>
+    <item android:right="0dp" android:left="16dp"><bitmap android:src="@drawable/li_right" android:gravity="right" android:tileMode="disabled"/></item>
+    <item android:left="16dp" android:right="16dp" ><bitmap android:src="@drawable/li_middle" android:gravity="fill_horizontal" android:tileMode="repeat"/></item>
+</layer-list>

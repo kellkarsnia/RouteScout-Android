@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mygistics.routescout"
+    android:versionCode="1"
+    android:versionName="0.2.3" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Styled"
+        android:largeHeap="true" >
+
+        <!-- splash screen -->
+        <activity
+            android:name="com.mygistics.routescout.SplashScreen"
+            android:label="RouteScout"
+            android:theme="@style/Theme.Sherlock.NoActionBar"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- household -->
+        <activity
+            android:name="com.mygistics.routescout.HouseholdActivity"
+            android:label="@string/title_activity_household" 
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- Login -->
+        <activity
+            android:name="com.mygistics.routescout.LoginActivity"
+            android:label="@string/title_activity_login" 
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- trip -->
+        <activity
+            android:name="com.mygistics.routescout.TripActivity"
+            android:label="@string/title_activity_trip" 
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- points collecting service -->
+		<service
+  			android:name="com.mygistics.routescout.Calculations"
+  			android:icon="@drawable/ic_launcher"
+  			android:label="GPS Position calculation"
+  			>
+		</service> 
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".HouseholdActivity" >
+
+    <ListView
+        android:id="@+id/membersList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:listSelector="@drawable/list_selector"
+        android:dividerHeight="4dp"
+        android:divider="@android:color/transparent"
+        >
+    </ListView>
+    
+    <ImageButton
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_start"
+        android:onClick="doStart"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        />
+    
+    
+    
+</RelativeLayout>

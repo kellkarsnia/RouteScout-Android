@@ -1,0 +1,234 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TripActivity" >
+
+    
+    <!-- Progress bar to show till start position found and trip has started -->
+    <LinearLayout android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical">
+        
+	    <ProgressBar
+	        android:id="@+id/progressBar1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	         />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff"
+	        android:text="Please wait..." />
+        
+    </LinearLayout>
+    
+    <!-- Collecting points detail info -->
+    
+    <LinearLayout android:id="@+id/tripdetail"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical"
+    	android:gravity="center_horizontal"
+    	android:padding="16dp"
+    	android:visibility="gone" >
+        
+         <!-- Received -->
+    
+	    <TextView
+	        android:id="@+id/totalPoints"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:shadowColor="#55000000"
+	        android:shadowDx="4"
+	        android:shadowDy="4"
+	        android:shadowRadius=".90"
+	        android:text="Received Locations: 0"
+	        android:textColor="#ffffff"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:gravity="center_horizontal" />
+
+	    <!-- Uploaded -->
+	    
+	    <TextView
+	        android:id="@+id/uploaded"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:shadowColor="#55000000"
+	        android:shadowDx="4"
+	        android:shadowDy="4"
+	        android:shadowRadius=".90"
+	        android:text="Uploaded Locations: 0"
+	        android:textColor="#ffffff"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:layout_marginTop="8dp"
+	        android:gravity="center_horizontal" />
+    
+	    <!-- Location info -->
+	    
+	    <TableLayout android:id="@+id/locationInfo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="16dp"
+	        android:layout_marginRight="8dp"
+	        android:layout_marginLeft="8dp"
+	        android:padding="16dp"
+	        android:background="#55000000"
+	         >
+	
+	        <TableRow
+	            android:id="@+id/tableRow0"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:divider="@android:color/transparent"
+	            android:dividerPadding="8dp" 
+	            android:padding="4dp" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Captured Location Info:"
+	                android:textColor="#ffffff"
+	                android:textStyle="bold"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+	        
+	        
+	        <TableRow
+	            android:id="@+id/tableRow1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:divider="@android:color/transparent"
+	            android:dividerPadding="8dp" 
+	            android:padding="4dp" >
+	
+	            <TextView
+	                android:id="@+id/lat"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Latitude:"
+	                android:textColor="#eeeeee"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+	
+	        <TableRow
+	            android:id="@+id/tableRow2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:divider="@android:color/transparent"
+	            android:dividerPadding="8dp" 
+	            android:padding="4dp">
+	
+	            <TextView
+	                android:id="@+id/lon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Longitude:"
+	                android:textColor="#eeeeee"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+	
+	        <!-- speed -->
+	        <TableRow
+	            android:id="@+id/tableRow3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:divider="@android:color/transparent"
+	            android:dividerPadding="8dp" 
+	            android:padding="4dp">
+	            <TextView
+	                android:id="@+id/l_speed"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Speed:"
+	                android:textColor="#eeeeee"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+	        
+	        <!-- accuracy -->
+	        <TableRow
+	            android:id="@+id/tableRow4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:divider="@android:color/transparent"
+	            android:dividerPadding="8dp" 
+	            android:padding="4dp">
+	            <TextView
+	                android:id="@+id/l_accuracy"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Accuracy:"
+	                android:textColor="#eeeeee"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+	        
+	        <!-- altitude -->
+	        <TableRow
+	            android:id="@+id/tableRow5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:divider="@android:color/transparent"
+	            android:dividerPadding="8dp" 
+	            android:padding="4dp">
+	            <TextView
+	                android:id="@+id/l_altitude"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Altitude:"
+	                android:textColor="#eeeeee"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+	        
+	        <!-- heading -->
+	        <TableRow
+	            android:id="@+id/tableRow6"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:divider="@android:color/transparent"
+	            android:dividerPadding="8dp" 
+	            android:padding="4dp">
+	            <TextView
+	                android:id="@+id/l_heading"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Heading:"
+	                android:textColor="#eeeeee"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+		</TableLayout>
+    </LinearLayout>
+    
+    <!-- Finishing trip message -->
+        
+    <LinearLayout android:id="@+id/finishtrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        
+	    <ProgressBar
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	         />
+
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff"
+	        android:textSize="20sp"
+	        android:textStyle="bold"
+	        android:text="Finishing trip..." />
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>
